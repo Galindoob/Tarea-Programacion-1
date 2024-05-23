@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Préstamos</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                Registro de Préstamos
+            </div>
+            <div class="card-body">
+                <form id="formulario">
+                    <div class="form-group">
+                        <label for="nombreCliente">Nombre del Cliente</label>
+                        <input type="text" class="form-control" id="nombreCliente" placeholder="Ingrese el nombre del cliente">
+                    </div>
+                    <div class="form-group">
+                        <label for="tipoPrestamo">Tipo de Préstamo</label>
+                        <select class="form-control" id="tipoPrestamo">
+                            <option value="Hipotecario">Hipotecario</option>
+                            <option value="Automotriz">Automotriz</option>
+                            <option value="Consumo">Consumo</option>
+                        </select>
+                    </div>
+                    <button type="button" class="btn btn-success" onclick="guardar()">Guardar</button>
+                    <button type="button" class="btn btn-primary" onclick="mostrarResumen()">Resumen</button>
+                </form>
+                <div id="resumen" class="mt-4"></div>
+                <a href="resumen.html" class="btn btn-info mt-3">Ver Resumen en otra Página</a>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
